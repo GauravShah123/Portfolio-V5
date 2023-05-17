@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./utilities.css">
+    <link rel="icon" href="./Assets/Images/gaurav-logo.svg" type="image/x-icon">
+    <head-context></head-context>
+    
+    <!-- Optional CSS and JS -->
+    <link rel="stylesheet" href="index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+
+    <nav-bar></nav-bar>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Gaurav Shah</h1>
+                <h5>Designing delightful UX in fintech</h5>
+                <div class="button-group">
+                    <button class="primary button-flex" onclick="window.scrollBy(0, window.innerHeight * 0.7);">See my
+                        work
+                        <span class="material-symbols-outlined">arrow_downward</span></button>
+                    <button class="secondary button-flex"
+                        onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's
+                        Talk <span class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </div>
+            <img src="./Assets/Images/Me/Hero Image.png" alt="Gaurav Shah's Profile Image">
+        </section>
+
+        <!-- Featured Work Section -->
+        <section class="works" id="works">
+            <a class="work" href="./Work/InvestMint/InvestMint.html">
+                <div id="work1">
+                    <img src="./Assets/Images/Work/Investmint.gif" alt="Investmint Mockup Gif" id="investmint-gif"
+                        class="loading-bg">
+                    <img src="./Assets/Images/Work/Laptop Mockup.png">
+                </div>
+                <div class="work-content" id="work1-content">
+                    <ul class="tags">
+                        <li>Product Development</li>
+                        <li>UX Research</li>
+                        <li>Market Research</li>
+                        <li>Figma Prototyping</li>
+                    </ul>
+                    <h2>InvestMint</h2>
+                    <p>Elevate your finances with ease. Our investment browser extension empowers you to effortlessly
+                        invest
+                        a portion of your e-commerce spending, opening doors to a brighter financial future.</p>
+                    <button class="button-flex">Read Case Study <span
+                            class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </a>
+
+            <a class="work" href="./Work/UWMA/UWMA.html">
+                <img src="./Assets/Images/Work/UWMA.png" alt="UW Marketing Association Branding Image" id="work2"
+                    class="work-image">
+                <div class="work-content" id="work2-content">
+                    <ul class="tags">
+                        <li>Rebranding</li>
+                        <li>Identity Design</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                    <h2>UW Marketing</h2>
+                    <p>Revitalizing the University of Waterloo's Marketing Association. Our fresh new identity is
+                        reaching
+                        new audiences and educating the community about the power of marketing.</p>
+                    <button class="button-flex">Read Case Study <span
+                            class="material-symbols-outlined">arrow_forward</span></button>
+                </div>
+            </a>
+        </section>
+
+        <!-- What sets me apart -->
+        <section class="apart container" id="apart">
+            <!-- <img src="http://assets.iceable.com/img/noise-transparent.png" class="overlay"> -->
+            <h2>What sets me apart?</h2>
+            <h1 class="watermark" id="apart-watermark" style="left: 0;">What sets me apart?</h1>
+            <div class="apart-content">
+                <div class="apart-block">
+                    <div class="number">1</div>
+                    <h3>Coding and Design</h3>
+                    <b>Bridging the gap between designers and developers
+                    </b>
+                    <p>My coding skills give me a developer's mindset when designing, enabling me to communicate my
+                        designs
+                        effectively and reduce the time and effort required for the development team to bring them to
+                        life.
+                    </p>
+                </div>
+                <div class="apart-block">
+                    <div class="number">2</div>
+                    <h3>Business Know How</h3>
+                    <b>Designing products with a strategic mindset
+                    </b>
+                    <p>Studying finance and business in high school, along with participating in competitions, has given
+                        me
+                        a strategic perspective on designing profitable products that consider a company's financial
+                        situation.</p>
+                </div>
+                <div class="apart-block">
+                    <div class="number">3</div>
+                    <h3>User Psychology</h3>
+                    <b>Designing for desired user behaviours
+                    </b>
+                    <p>Studying psychology has given me a deep understanding of how users interact with interfaces. I
+                        can
+                        harness psychology principles such as Fitts’ Law and the Gestalt Principles to achieve the
+                        desired
+                        user behavior and increase user engagement and satisfaction.</p>
+                </div>
+                <div class="apart-block">
+                    <div class="number">4</div>
+                    <h3>Marketing Insights</h3>
+                    <b>Designing products for success
+                    </b>
+                    <p>Studying marketing has given me a deep understanding of how price, product, place, and promotion
+                        all
+                        factor into making a product successful. I can design products that align with the company's
+                        marketing goals, and my insights can help the business grow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="marquee">
+            <div class="marquee__content">
+                <ul class="list-inline">
+                    <li>Minimalistic</li>
+                    <li>Elegant</li>
+                    <li>Intuitive</li>
+                    <li>Considerate</li>
+                    <li>Adaptive</li>
+                </ul>
+                <ul class="list-inline">
+                    <li>Minimalistic</li>
+                    <li>Elegant</li>
+                    <li>Intuitive</li>
+                    <li>Considerate</li>
+                    <li>Adaptive</li>
+                </ul>
+                <ul class="list-inline">
+                    <li>Minimalistic</li>
+                    <li>Elegant</li>
+                    <li>Intuitive</li>
+                    <li>Considerate</li>
+                    <li>Adaptive</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials container no-padding-top">
+            <img src="http://assets.iceable.com/img/noise-transparent.png" class="overlay fade">
+            <!-- <h1 class="watermark">Testimonials</h1> -->
+            <h2>Testimonials</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Dhruvi.png">
+                        <div class="profile-text">
+                            <h3>Dhruvi Shah</h3>
+                            <p>UWMA Club President</p>
+                        </div>
+                    </div>
+                    <p>Gaurav is an invaluable member of UW Marketing Association, transforming the club's image with
+                        new
+                        brand guidelines and themes. His work enhances social media, programs, and events, showcasing
+                        his
+                        creativity and dedicated work ethic.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Sonali.png">
+                        <div class="profile-text">
+                            <h3>Sonali Gupta</h3>
+                            <p>Principal of Indian Language School</p>
+                        </div>
+                    </div>
+                    <p>Congratulations and very well done to our young team leader, innovator, and designer. <br><br>
+
+                        This year the Flying High School Magazine is going to be a Magazine with a difference. Proud of
+                        you!
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="profile">
+                        <img src="./Assets/Images/Emily.png">
+                        <div class="profile-text">
+                            <h3>Emily D. Robinson</h3>
+                            <p>Coordinator at United for Literacy</p>
+                        </div>
+                    </div>
+                    <p>Congratulations and very well done to our young team leader, innovator, and designer. <br><br>
+
+                        This year the Flying High School Magazine is going to be a Magazine with a difference. Proud of
+                        you!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <!-- <img src="http://assets.iceable.com/img/noise-transparent.png" class="overlay"> -->
+            <img src="./Assets/Images/Me/About Image.jpg" alt="Gaurav Shah's Profile Image" class="loading-bg">
+            <div class="about-content">
+                <h2>About me</h2>
+                <p>I may have started out as a rocket scientist in the making, but quickly realized that the cutthroat
+                    world
+                    of engineering wasn't for me. Instead, I found my calling in the creative and strategic fields of
+                    design
+                    and business.
+                    <br><br>
+                    My journey has taken me from designing logos and freelancing for clients, to building a stock
+                    trading
+                    app that web scraped stock data from the internet (oh yes, I'm that cool). But it wasn't until I
+                    stumbled upon the world of UI/UX design that everything finally clicked.
+                    <br><br>
+                    Now, I'm a full-fledged UX designer with a focus on finance, and I couldn't be happier. I'm
+                    constantly
+                    learning and discovering new ways to create amazing user experiences, and I can't wait to see where
+                    this
+                    exciting journey takes me next.
+                </p>
+            </div>
+        </section>
+
+        <!-- Other Work -->
+        <section class="other-work container">
+            <img src="http://assets.iceable.com/img/noise-transparent.png" class="overlay fade">
+            <!-- <h1 class="watermark">Other Work</h1> -->
+            <h2>Other Work</h2>
+            <div class="cards">
+                <div class="card work">
+                    <img src="./Assets/Images/Work/MunchMap.png" alt="Munch Map">
+                    <div class="card-content">
+                        <ul class="tags">
+                            <li>Design-a-thon</li>
+                            <li>Product Thinking</li>
+                        </ul>
+                        <h4>Munch Map</h4>
+                        <p>Connecting food with those in need</p>
+                    </div>
+                </div>
+                <div class="card work">
+                    <img src="./Assets/Images/Work/Study Bunny.png" alt="Study Bunny">
+                    <div class="card-content">
+                        <ul class="tags">
+                            <li>UI Design</li>
+                            <li>Figma Basics</li>
+                        </ul>
+                        <h4>Study Bunny</h4>
+                        <p>All-in-one remote learning platform</p>
+                    </div>
+                </div>
+                <div class="card work">
+                    <img src="./Assets/Images/Work/TTP.png" alt="The Teen Pop">
+                    <div class="card-content">
+                        <ul class="tags">
+                            <li>Editorial Design</li>
+                            <li>Layout & Composition</li>
+                        </ul>
+                        <h4>The Teen Pop</h4>
+                        <p>India's first online teen magazine</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-content></footer-content>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Archivo", sans-serif;
+    font-family: "Figtree", sans-serif;
     transition: 0.2s;
 }
 
@@ -34,7 +34,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-margin-top: calc(var(--side-padding) * 2);
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -45,7 +45,7 @@ body {
 
 main{
     min-height: calc(100vh - 75px - 380px);
-    padding-top: 75px;
+    
 }
 
 img {
@@ -59,7 +59,7 @@ img.loading-bg{
 h1,
 h2,
 h4 {
-    font-family: 'p22', "Archivo", serif;
+    font-family: 'p22', "Figtree", serif;
 }
 
 .material-symbols-outlined {
@@ -70,7 +70,7 @@ h4 {
         'opsz' 48
 }
 
-.material-icons-outlined {
+.material-icons-outlined.material-icons-outlined {
     font-size: inherit;
 }
 
@@ -104,6 +104,7 @@ nav {
     font-size: var(--fz-20);
     height: 75px;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -252,6 +253,7 @@ footer{
     color: var(--white);
     background-color: var(--dark-alt);
     padding: var(--fz-52);
+    padding-top: calc(var(--fz-52) - var(--fz-20));
 }
 
 .footer-about p{
@@ -261,7 +263,7 @@ footer{
 }
 
 .footer-contact{
-    font-size: var(--fz-20);
+    font-size: calc(var(--fz-20) * 0.8);
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -280,6 +282,15 @@ footer{
 
 .footer-contact ul li{
     margin: var(--fz-12) 0;
+}
+
+.footer-contact ul li a{
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact ul li a span.material-icons-outlined{
+    font-size: calc(var(--fz-20) * 0.8) !important;
 }
 
 .footer-contact button{

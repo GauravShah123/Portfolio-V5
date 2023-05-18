@@ -4,15 +4,15 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
         <!-- Nav Bar -->
         <nav>
-            <a href="index.html">
-                <img src="./Assets/Images/Logo.svg" alt="Gaurav Shah's Logo" class="nav-logo">
+            <a href="/">
+                <img src="/Assets/Images/Logo.svg" alt="Gaurav Shah's Logo" class="nav-logo">
             </a>
             <ul>
                 <!-- <li class="current"><a href="#">Home</a></li> -->
-                <li><a href="#">Home</a></li>
-                <li><a href="#works">Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#works">Work</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
             </ul>
             <button class="button-flex" onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's Talk <span
                     class="material-symbols-outlined">arrow_forward</span></button>
@@ -31,7 +31,7 @@ class headContext extends HTMLElement {
         <title>Gaurav Shah's Portfolio</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;350;700&display=swap" rel="stylesheet">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">     
@@ -46,7 +46,7 @@ class footer extends HTMLElement {
         <!-- Footer -->
         <footer>
             <div class="footer-about">
-                <img src="./Assets/Images/Logo.svg" alt="Gaurav's Logo">
+                <img src="/Assets/Images/Logo.svg" alt="Gaurav's Logo">
                 <p>Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate
                     about product management and creating user-centric experiences that drive business growth.</p>
             </div>

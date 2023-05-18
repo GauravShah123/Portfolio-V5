@@ -13,6 +13,10 @@ nav.hide{
     opacity: 0.5;
 }
 
+h4{
+    font-size: calc(var(--fz-20) * 1.25);
+}
+
 header{
     padding-top: 75px;
     height: 400px;
@@ -127,6 +131,7 @@ p.main-p{
 .content .caption{
     color: var(--gray);
     font-size: calc(var(--fz-18) * 0.9);
+    margin-top: calc(var(--fz-18) * 0.5);
 }
 
 .callout{
@@ -149,6 +154,7 @@ p.main-p{
     background-color: var(--light-gray);
     padding: var(--fz-32);
     margin-top: var(--fz-52);
+    text-align: center;
 }
 
 .impact-title{
@@ -158,12 +164,47 @@ p.main-p{
 .impact-container{
     display: flex;
     gap: var(--fz-20);
+    justify-content: space-between;
 }
 
 .impact{
     text-align: center;
-    max-width: 200px;
+    /* max-width: 200px; */
 }
+
+.text-image-container {
+    display: flex;
+    gap: var(--fz-32);
+    margin-top: var(--fz-18);
+    /* align-items: center; */
+}
+
+.text-image-container > *{
+    max-height: 100%;
+}
+
+.text-image-container .first{
+    margin: 0;
+}
+
+.text-image-container .text{
+    height: fit-content;
+}
+
+blockquote{
+    font-weight: bold;
+    font-size: var(--fz-32);
+    position: relative;
+}
+
+figure{
+    margin-block: var(--fz-52);
+    text-align: left;
+    border-left: 5px solid var(--light-gray);
+    padding-left: var(--fz-20);
+}
+
+
 
 
 .scroll-to-top{

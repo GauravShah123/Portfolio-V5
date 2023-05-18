@@ -17,7 +17,7 @@ let previousScrollPosition = window.pageYOffset || document.documentElement.scro
 window.addEventListener('scroll', function () {
     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (currentScrollPosition < previousScrollPosition || currentScrollPosition < 75) {
+    if (previousScrollPosition - currentScrollPosition > 0 || currentScrollPosition < 75) {
         // User has scrolled up
         document.querySelector("nav").classList.remove("hide");
         document.querySelector("aside").classList.remove("up");

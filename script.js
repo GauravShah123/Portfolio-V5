@@ -55,7 +55,7 @@ class footer extends HTMLElement {
                 <ul class="contacts">
                     <li><a href="mailto:gshah@uwaterloo.ca"><span
                                 class="material-icons-outlined">email</span>&nbsp;&nbsp;gshah@uwaterloo.ca</a></li>
-                    <li><span class="material-icons-outlined">link</span>&nbsp;&nbsp;linkedin.com/in/gs336/</li>
+                    <li><a href="https://www.linkedin.com/in/gs336/"><span class="material-icons-outlined">link</span>&nbsp;&nbsp;linkedin.com/in/gs336/</a></li>
                     <li><span class="material-icons-outlined">location_on</span>&nbsp;&nbsp;Waterloo, Ontario, CA</li>
                 </ul>
                 <button class="button-flex" onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's Talk <span

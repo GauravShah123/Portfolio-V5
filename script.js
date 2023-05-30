@@ -21,26 +21,36 @@ class NavBar extends HTMLElement {
     }
 }
 
-class headContext extends HTMLElement {
-    constructor() {
-        super()
-        this.innerHTML = `
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gaurav Shah's Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;350;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
-        <meta property="og:title" content="Gaurav Shah's Portfolio" />
-        <meta property="og:description" content="Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate about product management and creating user-centric experiences that drive business growth." />
-        <meta property="og:image" content="/Assets/Images/Site.png" />    
-        `
-    }
-}
+let htmlHead = `
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JB66SYNV21"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JB66SYNV21');
+</script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;350;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
+<meta property="og:title" content="Gaurav Shah's Portfolio" />
+<meta property="og:description" content="Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate about product management and creating user-centric experiences that drive business growth." />
+<meta property="og:image" content="/Assets/Images/Site.png" />
+<link rel="stylesheet" href="/utilities.css">
+<link rel="icon" href="/Assets/Images/gaurav-logo.svg" type="image/x-icon">
+
+`
+
+let existingHeadStuff = document.querySelector("head").innerHTML;
+document.querySelector("head").innerHTML = htmlHead + existingHeadStuff;
+
 
 class footer extends HTMLElement {
     constructor() {
@@ -75,5 +85,4 @@ class footer extends HTMLElement {
 }
 
 customElements.define("nav-bar", NavBar);
-customElements.define("head-context", headContext);
 customElements.define("footer-content", footer);

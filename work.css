@@ -1,17 +1,6 @@
-:root{
+/* :root{
     --fz-18: 16px;
-    --gray: #777;
-    --light-gray: #f5f5f5;
-}
-
-html:has(nav.hide){
-    scroll-padding-top: var(--fz-32);
-}
-
-nav.hide{
-    top: -75px;
-    opacity: 0.5;
-}
+} */
 
 h4{
     font-size: calc(var(--fz-20) * 1.25);
@@ -205,20 +194,3 @@ figure{
 }
 
 
-
-
-.scroll-to-top{
-    position: fixed;
-    bottom: var(--fz-52);
-    right: var(--fz-52);
-    padding: var(--fz-12);
-    border-radius: var(--fz-52);
-    color: var(--gray);
-    background-color: var(--light-gray);
-    cursor: pointer;
-}
-
-.scroll-to-top:hover{
-    background-color: var(--gray);
-    color: var(--white);
-}

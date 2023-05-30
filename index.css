@@ -121,9 +121,9 @@ ul.tags {
 }
 
 ul.tags li {
-    background-color: var(--dark);
+    background-color: var(--dark-light);
     padding: calc(var(--fz-12) * 2 / 3) var(--fz-20);
-    border-radius: var(--fz-20);
+    border-radius: var(--fz-4);
     color: var(--white);
 }
 
@@ -235,7 +235,7 @@ h1.watermark {
 
 .marquee {
     color: var(--light);
-    font-size: calc(var(--fz-80) * 1.25);
+    font-size: var(--fz-52);
     font-weight: lighter;
     list-style: none;
     display: flex;
@@ -252,8 +252,8 @@ ul.list-inline li {
 ul.list-inline li::after {
     content: '';
     position: absolute;
-    height: var(--fz-32);
-    width: var(--fz-32);
+    height: var(--fz-20);
+    width: var(--fz-20);
     border-radius: var(--fz-32);
     background-color: var(--light);
     top: 50%;

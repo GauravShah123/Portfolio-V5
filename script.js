@@ -13,9 +13,14 @@ class NavBar extends HTMLElement {
                 <li><a href="/#works">Work</a></li>
                 <li><a href="/#about">About</a></li>
                 <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
+                <li> <a class="hidden-button" href="mailto:gshah@uwaterloo.ca">Let's Talk <span
+                class="material-symbols-outlined">arrow_forward</span></a></li>
             </ul>
             <button class="button-flex" onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's Talk <span
                     class="material-symbols-outlined">arrow_forward</span></button>
+                    <button class="hamburger" aria-label="Open the menu"><span class="material-symbols-outlined" aria-hidden="true">
+                    menu
+                    </span></button>
         </nav>
         `
     }
@@ -86,3 +91,9 @@ class footer extends HTMLElement {
 
 customElements.define("nav-bar", NavBar);
 customElements.define("footer-content", footer);
+
+// Add an event listener to the hamburger button
+document.querySelector('.hamburger').addEventListener('click', function () {
+    // Toggle the active class on the nav element
+    document.querySelector('nav').classList.toggle('active');
+});

@@ -109,7 +109,7 @@ nav {
     height: 75px;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
 }
 
@@ -327,6 +327,7 @@ footer {
     font-size: var(--fz-20);
     padding: var(--fz-32);
     background-color: var(--dark);
+    text-align: center;
 }
 
 
@@ -370,4 +371,126 @@ html:has(nav.hide){
 nav.hide{
     top: -75px;
     opacity: 0.5;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hidden-button{
+    display: none;
+    pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+    :root{
+
+        font-size: 16px;
+
+        --fz-4: 0.4rem;
+        --fz-8: 0.75rem;
+        --fz-12: 1rem;
+        --fz-18: 1.1rem;
+        --fz-20: 1.25rem;
+        --fz-32: 1.75rem;
+        --fz-52: 2.5rem;
+        --fz-80: 4rem;
+    
+        --side-padding: 3rem;
+    }
+    .watermark{
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    :root{
+
+        font-size: 12px;
+
+        --fz-4: 0.4rem;
+        --fz-8: 0.75rem;
+        --fz-12: 1rem;
+        --fz-18: 1.1rem;
+        --fz-20: 1.25rem;
+        --fz-32: 1.75rem;
+        --fz-52: 2.5rem;
+        --fz-80: 5rem;
+    
+        --side-padding: 3rem;
+    }
+    footer {
+        flex-direction: column;
+        padding: var(--side-padding);
+    }
+    .footer-about p{
+        width: 100%;
+    }
+    .footer-contact{
+        padding: var(--fz-20);
+        font-size: var(--fz-20);
+    }
+
+    nav{
+        z-index: 10000;
+        background-color: var(--dark-alt);
+    }
+
+    nav ul {
+        display: flex; /* Show the navigation elements when the nav has the active class */
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-alt);
+        transform: translateY(20%);
+        opacity: 0;
+        pointer-events: none;
+        padding: 1rem 0;
+        height: calc(100vh - 75px);
+        font-size: var(--fz-32);
+    }
+    
+    nav .hamburger {
+        display: block; /* Show the hamburger icon */
+        color: var(--white);
+    }
+
+    nav button.button-flex{
+        display: none;
+    }
+    
+    nav.active ul {
+        z-index: 1000;
+        transform: translateY(0%);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    nav ul li {
+        height: auto;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        height: auto;
+        display: block; /* Make each navigation item a block element */
+        width: 100%;
+        padding: 1em; /* Adjust the spacing of each navigation item */
+        text-align: center;
+    }
+
+    nav .hidden-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+        gap: var(--fz-20);
+        color: var(--primary);
+        position: relative;
+        top: 15vh;
+        font-weight: bold;
+    }
+    
 }

@@ -331,6 +331,10 @@ ul.list-inline li::after {
     border-radius: var(--fz-12);
 }
 
+.work.card{
+    min-height: auto;
+}
+
 .card h4 {
     font-size: var(--fz-52);
     margin: var(--fz-12) 0;

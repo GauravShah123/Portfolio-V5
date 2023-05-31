@@ -193,4 +193,58 @@ figure{
     padding-left: var(--fz-20);
 }
 
+.figma-button{
+    font-size: var(--fz-20);
+    margin-top: var(--fz-20);
+    padding: var(--fz-20) var(--fz-32);
+    border-radius: var(--fz-80);
+    cursor: pointer;
+    background-color: var(--light-gray);
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--fz-12);
+}
+
+.figma-button:hover{
+    background-color: #ccc;
+    /* color: var(--white); */
+}
+
+.figma-button p.caption{
+    display: none;
+}
+
+.figma-button img{
+    height: var(--fz-20);
+    margin: 0;
+    width: var(--fz-20);
+    object-fit: contain;
+}
+
+.material-symbols-outlined{
+    font-size: inherit;
+}
+
+@media (max-width: 700px) {
+    .details{
+        flex-direction: column;
+        align-items: start;
+        padding: var(--fz-32) 10vw 0 10vw;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+        padding: 10vw;
+        grid-gap: var(--fz-32);
+    }
+
+    aside{
+        position: static;
+    }
+    aside a{
+        font-size: var(--fz-20);
+        margin-bottom: var(--fz-18);
+    }
+}

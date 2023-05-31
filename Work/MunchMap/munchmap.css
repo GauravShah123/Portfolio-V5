@@ -1,0 +1,37 @@
+header{
+    display: flex;
+    background-color: #D22947;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.header-content{
+    height: 40%;
+    object-fit: contain;
+    width: fit-content;
+}
+
+.header-image{
+    height: 100%;
+    object-fit: contain;
+    width: fit-content;
+}
+
+.content > img{
+    margin-top: var(--fz-32);
+}
+
+ol{
+    padding-left: var(--fz-20);
+}
+
+ol li{
+    padding-left: var(--fz-8);
+}
+
+@media (max-width: 700px) {
+    .header-image{
+        display: none;
+    }
+}

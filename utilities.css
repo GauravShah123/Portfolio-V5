@@ -235,6 +235,7 @@ button.secondary:hover {
     padding: var(--fz-32);
     background-color: var(--transparent-white);
     border-radius: var(--fz-12);
+    color: inherit;
 }
 
 .card h4 {

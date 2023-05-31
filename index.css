@@ -506,4 +506,8 @@ ul.list-inline li::after {
     .about{
         grid-template-columns: 1fr;
     }
+
+    .overlay{
+        display: none;
+    }
 }

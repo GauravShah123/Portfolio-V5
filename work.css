@@ -230,6 +230,8 @@ a.figma-button{
     font-size: inherit;
 }
 
+
+
 @media (max-width: 700px) {
     .details{
         flex-direction: column;
@@ -250,4 +252,22 @@ a.figma-button{
         font-size: var(--fz-20);
         margin-bottom: var(--fz-18);
     }
+
+    header{
+        height: 250px;
+    }
+
+    .text-image-container{
+        flex-direction: column;
+    }
+
+    .half-width{
+        width: 40%;
+    }
+
+    .impact-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }

@@ -34,4 +34,7 @@ ol li{
     .header-image{
         display: none;
     }
+    .header-content{
+        height: 50%;
+    }
 }

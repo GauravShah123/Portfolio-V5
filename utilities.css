@@ -364,26 +364,26 @@ footer {
     color: var(--white);
 }
 
-html:has(nav.hide){
+html:has(nav.hide) {
     scroll-padding-top: var(--fz-32);
 }
 
-nav.hide{
+nav.hide {
     top: -75px;
     opacity: 0.5;
 }
 
-.hamburger{
+.hamburger {
     display: none;
 }
 
-.hidden-button{
+.hidden-button {
     display: none;
     pointer-events: none;
 }
 
 @media (max-width: 1100px) {
-    :root{
+    :root {
 
         font-size: 16px;
 
@@ -395,16 +395,21 @@ nav.hide{
         --fz-32: 1.75rem;
         --fz-52: 2.5rem;
         --fz-80: 4rem;
-    
+
         --side-padding: 3rem;
     }
-    .watermark{
+
+    .watermark {
         display: none;
     }
 }
 
 @media (max-width: 700px) {
-    :root{
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    :root {
 
         font-size: 12px;
 
@@ -416,28 +421,32 @@ nav.hide{
         --fz-32: 1.75rem;
         --fz-52: 2.5rem;
         --fz-80: 5rem;
-    
+
         --side-padding: 3rem;
     }
+
     footer {
         flex-direction: column;
         padding: var(--side-padding);
     }
-    .footer-about p{
+
+    .footer-about p {
         width: 100%;
     }
-    .footer-contact{
+
+    .footer-contact {
         padding: var(--fz-20);
         font-size: var(--fz-20);
     }
 
-    nav{
+    nav {
         z-index: 10000;
         background-color: var(--dark-alt);
     }
 
     nav ul {
-        display: flex; /* Show the navigation elements when the nav has the active class */
+        display: flex;
+        /* Show the navigation elements when the nav has the active class */
         position: absolute;
         top: 100%;
         flex-direction: column;
@@ -451,37 +460,40 @@ nav.hide{
         height: calc(100vh - 75px);
         font-size: var(--fz-32);
     }
-    
+
     nav .hamburger {
-        display: block; /* Show the hamburger icon */
+        display: block;
+        /* Show the hamburger icon */
         color: var(--white);
     }
 
-    nav button.button-flex{
+    nav button.button-flex {
         display: none;
     }
-    
+
     nav.active ul {
         z-index: 1000;
         transform: translateY(0%);
         opacity: 1;
         pointer-events: all;
     }
-    
+
     nav ul li {
         height: auto;
         width: 100%;
     }
-    
+
     nav ul li a {
         height: auto;
-        display: block; /* Make each navigation item a block element */
+        display: block;
+        /* Make each navigation item a block element */
         width: 100%;
-        padding: 1em; /* Adjust the spacing of each navigation item */
+        padding: 1em;
+        /* Adjust the spacing of each navigation item */
         text-align: center;
     }
 
-    nav .hidden-button{
+    nav .hidden-button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -492,5 +504,5 @@ nav.hide{
         top: 15vh;
         font-weight: bold;
     }
-    
+
 }

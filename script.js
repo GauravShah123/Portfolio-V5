@@ -97,3 +97,17 @@ document.querySelector('.hamburger').addEventListener('click', function () {
     // Toggle the active class on the nav element
     document.querySelector('nav').classList.toggle('active');
 });
+
+// Get all the links inside the navigation menu
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Add click event listeners to each link
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Remove the active class from the nav element
+        document.querySelector('nav').classList.remove('active');
+
+        // Remove the active class from the "Let's Talk" button
+        document.querySelector('.button-flex').classList.remove('active');
+    });
+});

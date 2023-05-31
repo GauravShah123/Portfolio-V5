@@ -193,13 +193,16 @@ figure{
     padding-left: var(--fz-20);
 }
 
-.figma-button{
+a.figma-button{
     font-size: var(--fz-20);
     margin-top: var(--fz-20);
     padding: var(--fz-20) var(--fz-32);
     border-radius: var(--fz-80);
     cursor: pointer;
     background-color: var(--light-gray);
+    width: fit-content;
+    text-decoration: none;
+    color: var(--dark-alt);
 
     display: flex;
     align-items: center;

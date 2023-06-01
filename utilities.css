@@ -1,18 +1,17 @@
 @font-face {
     font-family: p22;
-    src: url("Assets/Fonts/Heading\ Font.otf");
+    src: url("Assets/Fonts/Heading/ Font.otf")
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Figtree", sans-serif;
-    transition: 0.2s;
+    font-family: Figtree, sans-serif;
+    transition: .2s
 }
 
 :root {
-
     --dark-alt: #000;
     --dark: #111;
     --dark-light: #222;
@@ -23,7 +22,6 @@
     --transparent-white: rgba(255, 255, 255, 0.05);
     --gray: #777;
     --light-gray: #f5f5f5;
-
     --fz-4: 0.25rem;
     --fz-8: 0.5rem;
     --fz-12: 0.75rem;
@@ -32,57 +30,51 @@
     --fz-32: 2rem;
     --fz-52: 3rem;
     --fz-80: 5rem;
-
-    --side-padding: 5rem;
+    --side-padding: 5rem
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 100px
 }
 
 body {
     width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 main {
-    min-height: calc(100vh - 75px - 380px);
-
+    min-height: calc(100vh - 75px - 380px)
 }
 
 img {
-    pointer-events: none;
+    pointer-events: none
 }
 
 img.loading-bg {
-    background-color: var(--light);
+    background-color: var(--light)
 }
 
 h1,
 h2,
 h4 {
-    font-family: 'p22', "Figtree", serif;
+    font-family: p22, Figtree, serif
 }
 
 .material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 600,
-        'GRAD' 0,
-        'opsz' 48
+    font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 48
 }
 
 .material-icons-outlined.material-icons-outlined {
-    font-size: inherit;
+    font-size: inherit
 }
 
 .button-flex {
     display: flex;
     gap: var(--fz-12);
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .under-construction {
@@ -90,13 +82,13 @@ h4 {
     place-items: center;
     font-size: var(--fz-52);
     color: var(--dark);
-    font-weight: bold;
+    font-weight: 700
 }
 
-main:has(> .under-construction) {
+main:has(>.under-construction) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 nav {
@@ -110,22 +102,22 @@ nav {
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 1000;
+    z-index: 1000
 }
 
 nav img {
-    height: 100%;
+    height: 100%
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 nav ul li {
-    height: 100%;
+    height: 100%
 }
 
 nav ul li a {
@@ -136,16 +128,16 @@ nav ul li a {
     cursor: pointer;
     align-items: center;
     text-decoration: none;
-    color: var(--light);
+    color: var(--light)
 }
 
 nav ul li a:hover {
     background-color: var(--dark-light);
-    color: var(--light);
+    color: var(--light)
 }
 
 nav ul li.current {
-    border-bottom: var(--light) 2px solid;
+    border-bottom: var(--light) 2px solid
 }
 
 nav button {
@@ -155,100 +147,100 @@ nav button {
     background-color: transparent;
     color: var(--primary);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700
 }
 
 nav button:hover {
     background-color: var(--primary);
-    color: var(--dark-alt);
+    color: var(--dark-alt)
 }
 
 h1 {
-    font-size: calc(var(--fz-80) * 1.25);
+    font-size: calc(var(--fz-80) * 1.25)
 }
 
 h2 {
-    font-size: var(--fz-80);
+    font-size: var(--fz-80)
 }
 
 .container h2 {
-    text-align: center;
+    text-align: center
 }
 
 .container.no-padding-top {
-    padding-top: 0;
+    padding-top: 0
 }
 
 h5 {
     font-size: var(--fz-32);
     font-weight: lighter;
-    margin-top: var(--fz-8);
+    margin-top: var(--fz-8)
 }
 
 p {
     font-size: var(--fz-20);
     font-weight: 400;
-    line-height: 150%;
+    line-height: 150%
 }
 
 button {
-    border: none;
+    border: none
 }
 
 button.primary {
     background-color: var(--primary);
-    color: var(--dark);
+    color: var(--dark)
 }
 
 button.primary:hover {
     background-color: var(--light);
-    color: var(--dark);
+    color: var(--dark)
 }
 
 button.secondary {
     background-color: transparent;
     color: var(--primary);
-    border: var(--primary) 2px solid;
+    border: var(--primary) 2px solid
 }
 
 button.secondary:hover {
     background-color: var(--light);
     color: var(--dark);
-    border: var(--light) 2px solid;
+    border: var(--light) 2px solid
 }
 
 .container {
     width: 100vw;
     position: relative;
     color: var(--white);
-    padding: var(--side-padding);
+    padding: var(--side-padding)
 }
 
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--fz-32);
-    margin-top: calc(var(--side-padding) / 2);
+    margin-top: calc(var(--side-padding)/ 2)
 }
 
 .card {
     padding: var(--fz-32);
     background-color: var(--transparent-white);
     border-radius: var(--fz-12);
-    color: var(--white);
+    color: var(--white)
 }
 
 .card h4 {
     font-size: var(--fz-52);
-    margin: var(--fz-12) 0;
+    margin: var(--fz-12) 0
 }
 
 .card>p {
-    margin-top: var(--fz-20);
+    margin-top: var(--fz-20)
 }
 
 a.work {
-    text-decoration: none;
+    text-decoration: none
 }
 
 footer {
@@ -258,44 +250,44 @@ footer {
     color: var(--white);
     background-color: var(--dark-alt);
     padding: var(--fz-52);
-    padding-top: calc(var(--fz-52) - var(--fz-20));
+    padding-top: calc(var(--fz-52) - var(--fz-20))
 }
 
 .footer-about p {
     padding: 0 var(--fz-20);
     font-size: var(--fz-20);
-    width: 400px;
+    width: 400px
 }
 
 .footer-contact {
-    font-size: calc(var(--fz-20) * 0.8);
+    font-size: calc(var(--fz-20) * .8);
     display: flex;
     justify-content: space-between;
     align-items: start;
     flex-direction: column;
-    padding-top: var(--fz-20);
+    padding-top: var(--fz-20)
 }
 
 .footer-contact h3 {
-    font-size: var(--fz-32);
+    font-size: var(--fz-32)
 }
 
 .footer-contact ul {
     list-style: none;
-    width: fit-content;
+    width: fit-content
 }
 
 .footer-contact ul li {
-    margin: var(--fz-12) 0;
+    margin: var(--fz-12) 0
 }
 
 .footer-contact ul li a {
     display: flex;
-    align-items: center;
+    align-items: center
 }
 
 .footer-contact ul li a span.material-icons-outlined {
-    font-size: calc(var(--fz-20) * 0.8) !important;
+    font-size: calc(var(--fz-20) * .8) !important
 }
 
 .footer-contact button {
@@ -307,16 +299,16 @@ footer {
     border: none;
     background-color: var(--primary);
     color: var(--dark-alt);
-    font-weight: bold;
+    font-weight: 700
 }
 
 .footer-contact button:hover {
-    background-color: var(--light);
+    background-color: var(--light)
 }
 
 .footer-contact ul li a {
     text-decoration: none;
-    color: inherit;
+    color: inherit
 }
 
 .ending {
@@ -328,24 +320,23 @@ footer {
     font-size: var(--fz-20);
     padding: var(--fz-32);
     background-color: var(--dark);
-    text-align: center;
+    text-align: center
 }
-
 
 @media (prefers-reduced-motion) {
     .marquee__content {
         -webkit-animation-play-state: paused;
-        animation-play-state: paused;
+        animation-play-state: paused
     }
 
     .watermark {
         opacity: 0;
-        pointer-events: none;
+        pointer-events: none
     }
 
     .work:hover {
         scale: 1;
-        filter: saturate(0);
+        filter: saturate(0)
     }
 }
 
@@ -357,38 +348,48 @@ footer {
     border-radius: var(--fz-52);
     color: var(--gray);
     background-color: var(--light-gray);
-    cursor: pointer;
+    cursor: pointer
 }
 
 .scroll-to-top:hover {
     background-color: var(--gray);
-    color: var(--white);
-}
-
-html:has(nav.hide) {
-    scroll-padding-top: var(--fz-32);
-}
-
-nav.hide {
-    top: -75px;
-    opacity: 0.5;
+    color: var(--white)
 }
 
 .hamburger {
     display: none;
-    font-size: var(--fz-32);
+    font-size: var(--fz-32)
 }
 
 .hidden-button {
     display: none;
-    pointer-events: none;
+    pointer-events: none
 }
 
-@media (max-width: 1100px) {
+button.play-audio.play-audio {
+    border: none;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 0 0 0 var(--fz-20);
+    background-color: var(--dark-alt)
+}
+
+button.play-audio img {
+    fill: var(--light);
+    height: var(--fz-32)
+}
+
+button.play-audio.play-audio:hover {
+    border: none;
+    background-color: var(--dark-light)
+}
+
+@media (max-width:1100px) {
     :root {
-
         font-size: 16px;
-
         --fz-4: 0.4rem;
         --fz-8: 0.75rem;
         --fz-12: 1rem;
@@ -397,24 +398,21 @@ nav.hide {
         --fz-32: 1.75rem;
         --fz-52: 2.5rem;
         --fz-80: 4rem;
-
-        --side-padding: 3rem;
+        --side-padding: 3rem
     }
 
     .watermark {
-        display: none;
+        display: none
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width:700px) {
     html {
-        scroll-padding-top: 75px;
+        scroll-padding-top: 75px
     }
 
     :root {
-
         font-size: 12px;
-
         --fz-4: 0.4rem;
         --fz-8: 0.75rem;
         --fz-12: 1rem;
@@ -423,32 +421,30 @@ nav.hide {
         --fz-32: 1.75rem;
         --fz-52: 2.5rem;
         --fz-80: 5rem;
-
-        --side-padding: 3rem;
+        --side-padding: 3rem
     }
 
     footer {
         flex-direction: column;
-        padding: var(--side-padding);
+        padding: var(--side-padding)
     }
 
     .footer-about p {
-        width: 100%;
+        width: 100%
     }
 
     .footer-contact {
         padding: var(--fz-20);
-        font-size: var(--fz-20);
+        font-size: var(--fz-20)
     }
 
     nav {
         z-index: 10000;
-        background-color: var(--dark-alt);
+        background-color: var(--dark-alt)
     }
 
     nav ul {
         display: flex;
-        /* Show the navigation elements when the nav has the active class */
         position: absolute;
         top: 100%;
         flex-direction: column;
@@ -460,39 +456,36 @@ nav.hide {
         pointer-events: none;
         padding: 1rem 0;
         height: calc(100vh - 75px);
-        font-size: var(--fz-32);
+        font-size: var(--fz-32)
     }
 
     nav .hamburger {
         display: block;
-        /* Show the hamburger icon */
-        color: var(--white);
+        color: var(--white)
     }
 
     nav button.button-flex {
-        display: none;
+        display: none
     }
 
     nav.active ul {
         z-index: 1000;
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
-        pointer-events: all;
+        pointer-events: all
     }
 
     nav ul li {
         height: auto;
-        width: 100%;
+        width: 100%
     }
 
     nav ul li a {
         height: auto;
         display: block;
-        /* Make each navigation item a block element */
         width: 100%;
         padding: 1em;
-        /* Adjust the spacing of each navigation item */
-        text-align: center;
+        text-align: center
     }
 
     nav .hidden-button {
@@ -504,7 +497,23 @@ nav.hide {
         color: var(--primary);
         position: relative;
         top: 15vh;
-        font-weight: bold;
+        font-weight: 700
     }
+}
 
+/* Only for desktop */
+@media (min-width:700px) {
+    button.play-audio.left {
+        left: 0;
+        right: auto;
+        border-radius: 0 0 var(--fz-20) 0
+    }
+    html:has(nav.hide) {
+        scroll-padding-top: var(--fz-32)
+    }
+    
+    nav.hide {
+        top: -75px;
+        opacity: .5
+    }
 }

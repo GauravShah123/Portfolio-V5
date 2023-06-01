@@ -2,6 +2,13 @@ body {
     background-color: var(--dark);
 }
 
+/* Only for desktop */
+@media (min-width: 700px) {
+    nav a#home {
+        border-bottom: 2px solid var(--light);
+    }
+}
+
 .hero {
     display: flex;
     align-items: center;
@@ -57,6 +64,12 @@ body {
     /* rotate: -1deg; */
     scale: 1.05;
     cursor: pointer;
+}
+
+.work.disabled:hover {
+    scale: 1;
+    cursor: auto;
+
 }
 
 .work-image {
@@ -116,14 +129,14 @@ body {
 
 ul.tags {
     list-style: none;
-    font-size: var(--fz-12);
+    font-size: 1rem;
     display: flex;
     gap: var(--fz-12);
     flex-wrap: wrap;
 }
 
 ul.tags li {
-    background-color: var(--dark-light);
+    background-color: #ffffff0a;
     padding: calc(var(--fz-12) * 2 / 3) 1rem;
     border-radius: var(--fz-4);
     color: var(--white);
@@ -331,8 +344,13 @@ ul.list-inline li::after {
     border-radius: var(--fz-12);
 }
 
-.work.card{
+.work.card {
     min-height: auto;
+    position: relative;
+}
+
+.card.disabled {
+    filter: grayscale(100%);
 }
 
 .card h4 {
@@ -421,30 +439,37 @@ ul.list-inline li::after {
 
 
 @media (max-width: 1100px) {
-    .hero{
+    .hero {
         gap: var(--side-padding);
     }
-    .hero-content h1{
+
+    .hero-content h1 {
         width: max-content;
     }
+
     #work1,
     #work2 {
         display: none;
     }
 
-    .hero{
+    .hero {
         width: 120vw;
     }
-    .work{
+
+    .work {
         height: fit-content;
     }
-    .work-content, #work2-content{
+
+    .work-content,
+    #work2-content {
         padding: var(--side-padding);
     }
-    .cards{
+
+    .cards {
         grid-template-columns: 1fr 1fr;
     }
-    .about{
+
+    .about {
         grid-template-columns: 1fr 3fr;
     }
 }
@@ -457,7 +482,7 @@ ul.list-inline li::after {
         width: 100vw;
     }
 
-    .hero-content h1{
+    .hero-content h1 {
         width: auto;
     }
 
@@ -496,22 +521,23 @@ ul.list-inline li::after {
         margin-top: var(--side-padding);
     } */
 
-    .apart-content{
+    .apart-content {
         grid-template-columns: 1fr;
     }
 
-    .apart-block .number{
+    .apart-block .number {
         display: none;
     }
 
-    .cards{
-        grid-template-columns: 1fr;
-    }
-    .about{
+    .cards {
         grid-template-columns: 1fr;
     }
 
-    .overlay{
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay {
         display: none;
     }
 }

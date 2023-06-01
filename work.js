@@ -55,7 +55,7 @@ window.addEventListener('scroll', () => {
 });
 
 //Add image captions based on alt text
-document.querySelectorAll("main .content img").forEach(image => {
+document.querySelectorAll("main img").forEach(image => {
     caption = image.getAttribute("alt");
     let captionTag = document.createElement("p");
     captionTag.classList.add("caption");
@@ -65,4 +65,17 @@ document.querySelectorAll("main .content img").forEach(image => {
 
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function openTab(openTabLink, closeTabLink, tabToOpen, tabToClose){
+    let tabToOpenElem = document.querySelector("#"+tabToOpen);
+    tabToOpenElem.classList.remove("hide");
+    let tabToCloseElem = document.querySelector("#"+tabToClose);
+    tabToCloseElem.classList.add("hide");
+
+    //Change the active link
+    document.querySelector("#link"+closeTabLink).classList.remove("active");
+    document.querySelector("#link"+closeTabLink).setAttribute("aria-selected", "false")
+    document.querySelector("#link"+openTabLink).classList.add("active");
+    document.querySelector("#link"+closeTabLink).setAttribute("aria-selected", "true")
 }

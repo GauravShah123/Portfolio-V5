@@ -23,12 +23,29 @@
     <header>
         <img src="header.png" alt="UW Marketing Association">
     </header>
+    <!-- <h1 class="project-heading">UW Marketing Association</h1> -->
     <section class="details">
         <div class="detail"><b>Role:</b> Design Coordinator</div>
         <div class="detail"><b>Timeline:</b> Fall 2022, 2 months</div>
         <div class="detail"><b>Software:</b> Figma & Adobe Illustrator</div>
     </section>
-    <main>
+    <div class="tab">
+        <button class="tablinks active" id="link1" onclick="openTab(1, 2, 'overview', 'case-study')" role="tab" aria-selected="true" aria-controls="tabpanel-id">Overview</button>
+        <button class="tablinks" id="link2" onclick="openTab(2, 1, 'case-study', 'overview')" role="tab" aria-selected="false" aria-controls="tabpanel-id">Case&nbsp;Study</button>
+        <div class="tablinks empty-tab"></div>
+    </div>
+    <main id="overview">
+        <h2>Problem</h2>
+        <p>The UW Marketing Association (UWMA) needed to rebrand after a temporary shutdown due to COVID restrictions, as their old design failed to reflect the club's fun and creative nature.</p>
+        <h2>Solution</h2>
+        <p>I led a rebranding effort that involved creating a modern letter mark logo, a vibrant color scheme, sleek typography, and various logo variations. The brand book and guidelines provided a cohesive identity and allowed room for creativity.
+            <br><br>
+            <img src="8.png" alt="The new brand book">
+        </p>
+        <h2>Impact</h2>
+        <p>The rebranding led to a 423% increase in engagement, 316% increase in post interactions, and 700% increase in profile visits. The unique identity helped UWMA stand out and attract more people to their social media and activities.</p>
+    </main>
+    <main id="case-study" class="hide">
         <aside>
         </aside>
         <section class="content">

@@ -6,8 +6,8 @@
     <script src="/script.js" defer></script>
     <link rel="stylesheet" href="/utilities.css">
     <link rel="icon" href="/Assets/Images/gaurav-logo.svg" type="image/x-icon">
-    
-    
+
+
     <title>Case Study - InvestMint</title>
     <link rel="stylesheet" href="/work.css">
     <script src="/work.js" defer></script>
@@ -19,12 +19,39 @@
     <header>
         <img src="header.png" alt="InvestMint">
     </header>
+
+    <!-- <h1 class="project-heading">InvestMint</h1> -->
     <section class="details">
         <div class="detail"><b>Role:</b> UX and Marketing Lead</div>
         <div class="detail"><b>Timeline:</b> Summer 2022, 3 months</div>
         <div class="detail"><b>Software:</b> Figma & Google forms</div>
     </section>
-    <main>
+    <div class="tab">
+        <button class="tablinks active" id="link1" onclick="openTab(1, 2, 'overview', 'case-study')" role="tab" aria-selected="true" aria-controls="tabpanel-id">Overview</button>
+        <button class="tablinks" id="link2" onclick="openTab(2, 1, 'case-study', 'overview')" role="tab" aria-selected="false" aria-controls="tabpanel-id">Case&nbsp;Study</button>
+        <div class="tablinks empty-tab"></div>
+    </div>
+    <main id="overview">
+        <h2>Problem</h2>
+        <p>With rising inflation, traditional saving methods became ineffective, making investing a necessity. Our
+            survey indicated that 56% of young individuals expressed interest in investing but didn't take action due to
+            factors like lack of knowledge, income, fear of loss, and limited time. Negative emotions and a sense of
+            alienation further discouraged them from exploring investment opportunities.</p>
+        <h2>Solution</h2>
+        <p>To shift users' mindset towards investing, we leveraged their positive association with e-commerce websites.
+            Instead of tying investing to income, we associated it with their spending habits. By asking if they could
+            set aside a small percentage of their planned purchase, we gradually introduced them to investing. Our
+            browser extension allowed users to save while shopping, offering practical application of learned concepts.
+            Our unique value proposition was to help beginners learn and save slowly, ultimately becoming confident
+            investors. The browser extension streamlined the process, linking to a website and app for investment
+            monitoring and financial education.</p>
+        <h2>Impact</h2>
+        <p>Our project stood out, being selected in the top 4% worldwide. We achieved an impressive 80% user adoption
+            rate, generated over 20 promising leads, and identified a total available market of $151M. My key takeaways
+            include the significance of process, the nuances of copywriting, and the remarkable benefits of auto-layout
+            in Figma.</p>
+    </main>
+    <main id="case-study" class="hide">
         <aside>
         </aside>
         <section class="content">
@@ -84,7 +111,7 @@
 
 
 
-            <div class="callout warning">
+            <!-- <div class="callout warning">
                 <div class="callout-emoji">⚠️</div>
                 <div class="callout-content">
                     <b>Skip ahead for more UX</b>
@@ -92,7 +119,7 @@
                         these steps used was helpful in the design process, however if you need to skip to the next step
                         in the UX process, you can read more about the user research <a href="#5">here</a>.</p>
                 </div>
-            </div>
+            </div> -->
 
             <h2>Market Analysis</h2>
             <h3>Market Segmentation</h3>

@@ -9,10 +9,10 @@ class NavBar extends HTMLElement {
             </a>
             <ul>
                 <!-- <li class="current"><a href="#">Home</a></li> -->
-                <li><a href="/">Home</a></li>
-                <li><a href="/#works">Work</a></li>
-                <li><a href="/#about">About</a></li>
-                <li><a href="/Resume.pdf" target="_blank">Resume</a></li>
+                <li><a id="home" href="/">Home</a></li>
+                <li><a id="work" href="/#works">Work</a></li>
+                <li><a id="about" href="/#about">About</a></li>
+                <li><a id="Résumé" href="/Resume.pdf" target="_blank">Résumé</a></li>
                 <li> <a class="hidden-button" href="mailto:gshah@uwaterloo.ca">Let's Talk <span
                 class="material-symbols-outlined">arrow_forward</span></a></li>
             </ul>
@@ -103,7 +103,7 @@ const navLinks = document.querySelectorAll('nav ul li a');
 
 // Add click event listeners to each link
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         // Remove the active class from the nav element
         document.querySelector('nav').classList.remove('active');
 

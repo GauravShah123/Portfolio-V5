@@ -2,13 +2,6 @@ body {
     background-color: var(--dark);
 }
 
-/* Only for desktop */
-@media (min-width: 700px) {
-    nav a#home {
-        border-bottom: 2px solid var(--light);
-    }
-}
-
 .hero {
     display: flex;
     align-items: center;
@@ -437,6 +430,70 @@ ul.list-inline li::after {
     width: 100%;
 }
 
+.worst-ux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.worst-ux>* {
+    position: relative;
+    z-index: 2;
+    color: var(--light);
+}
+
+.worst-ux-p {
+    padding: var(--fz-32) 0;
+    max-width: 65ch;
+}
+
+.worst-ux .bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.05;
+
+    
+        --s: 80px; /* control the size */
+        
+        --_g: #0000 52%,#000000 /* first color */ 54% 57%,#0000 59%; 
+        background: 
+         radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+         radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+         radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+         radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+         var(--primary); /* second color */
+        background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+}
+
+.worst-ux  button {
+    padding: var(--fz-12) var(--fz-32);
+    font-size: var(--fz-20);
+    border-radius: var(--fz-52);
+    width: fit-content;
+    margin-top: var(--fz-12);
+    border: 2px solid var(--light);
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--light);
+    cursor: pointer;
+}
+
+.worst-ux  button:hover {
+    background-color: var(--light);
+    border: 2px solid var(--light);
+    color: var(--dark);
+}
+
+h2.margin-bottom{
+    margin-bottom: var(--fz-32);
+}
 
 @media (max-width: 1100px) {
     .hero {
@@ -539,5 +596,23 @@ ul.list-inline li::after {
 
     .overlay {
         display: none;
+    }
+
+    .worst-ux {
+        align-items: start;
+    }
+
+    .worst-ux h2{
+        text-align: left;
+    }
+}
+
+/* Only for desktop */
+@media (min-width: 700px) {
+    nav a#home {
+        border-bottom: 2px solid var(--light);
+    }
+    .worst-ux-p{
+        text-align: center; 
     }
 }

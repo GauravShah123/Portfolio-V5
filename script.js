@@ -46,7 +46,7 @@ let htmlHead = `
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
 <meta property="og:title" content="Gaurav Shah's Portfolio" />
 <meta property="og:description" content="Designing delightful UX in fintech. A full-fledged UX designer with a focus on finance, constantly learning and discovering new ways to create amazing user experiences." />
-<meta property="og:image" content="/Assets/Images/Site.png" />
+<meta property="og:image" content="https://gaurav.studio/Assets/Images/Site.png" />
 <meta property="og:image:alt" content="Gaurav Shah's Portfolio">
 <meta name="description" content="Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate about product management and creating user-centric experiences that drive business growth." />
 <link rel="stylesheet" href="/utilities.css">

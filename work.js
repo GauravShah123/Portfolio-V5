@@ -79,3 +79,6 @@ function openTab(openTabLink, closeTabLink, tabToOpen, tabToClose){
     document.querySelector("#link"+openTabLink).classList.add("active");
     document.querySelector("#link"+closeTabLink).setAttribute("aria-selected", "true")
 }
+
+document.querySelector("#overview").innerHTML+=`<div></div><button class="read button-flex" onclick="document.querySelector('.tab').scrollIntoView(); openTab(2, 1, 'case-study', 'overview');">Read Case Study <span
+class="material-symbols-outlined">arrow_forward</span></button>`

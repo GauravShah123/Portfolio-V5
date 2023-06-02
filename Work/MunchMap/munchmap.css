@@ -38,3 +38,13 @@ ol li{
         height: 50%;
     }
 }
+
+header{
+    height: 400px;
+}
+
+@media (max-width:700px) {
+    header{
+        height: 250px;
+    }
+}

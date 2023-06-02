@@ -14,7 +14,7 @@ h4 {
 }
 
 header {
-    height: 400px;
+    height: fit-content;
     margin-top: 75px;
 }
 
@@ -303,7 +303,23 @@ a.figma-button {
     font-size: inherit;
 }
 
+.read{
+    padding: var(--fz-12) var(--fz-32);
+    font-size: var(--fz-20);
+    border-radius: var(--fz-52);
+    width: fit-content;
+    margin-top: var(--fz-12);
+    border: 2px solid var(--dark);
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--dark);
+    cursor: pointer;
+}
 
+.read:hover {
+    background-color: var(--dark);
+    color: var(--light);
+}
 
 @media (max-width: 700px) {
     .details {
@@ -325,10 +341,6 @@ a.figma-button {
     aside a {
         font-size: var(--fz-20);
         margin-bottom: var(--fz-18);
-    }
-
-    header {
-        height: 250px;
     }
 
     .text-image-container {

@@ -42,14 +42,33 @@ let htmlHead = `
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100;350;700&display=swap" rel="stylesheet">
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> 
 <meta property="og:title" content="Gaurav Shah's Portfolio" />
-<meta property="og:description" content="Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate about product management and creating user-centric experiences that drive business growth." />
+<meta property="og:description" content="Designing delightful UX in fintech. A full-fledged UX designer with a focus on finance, constantly learning and discovering new ways to create amazing user experiences." />
 <meta property="og:image" content="/Assets/Images/Site.png" />
+<meta property="og:image:alt" content="Gaurav Shah's Portfolio">
+<meta name="description" content="Gaurav Shah, a Global Business and Digital Arts student at the University of Waterloo, is passionate about product management and creating user-centric experiences that drive business growth." />
 <link rel="stylesheet" href="/utilities.css">
 <link rel="icon" href="/Assets/Images/gaurav-logo.svg" type="image/x-icon">
+<meta name="author" content="Gaurav Shah">
+<meta name="keywords" content="UX designer, fintech, product management, user-centric experiences, portfolio, Gaurav Shah">
+<meta name="robots" content="index, follow">
+<meta name="twitter:card" content="/Assets/Images/Site.png">
+<meta name="twitter:title" content="Gaurav Shah's Portfolio">
+<meta name="twitter:description" content="Designing delightful UX in fintech. A full-fledged UX designer with a focus on finance, constantly learning and discovering new ways to create amazing user experiences.">
+<meta name="twitter:image" content="/Assets/Images/Site.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaurav.studio/">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="og:locale" content="en_CA">
+<meta name="revisit-after" content="7 days">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="application-name" content="Gaurav Shah">
+<meta name="msapplication-tooltip" content="Gaurav Shah's Portfolio">
+<meta name="apple-mobile-web-app-title" content="Gaurav Shah">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 `
 

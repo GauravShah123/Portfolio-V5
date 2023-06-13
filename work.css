@@ -146,6 +146,11 @@ main h3 {
     margin-top: var(--fz-32);
 }
 
+h3.list-h3{
+    font-size: calc(var(--fz-32) * 0.75);
+    margin-top: calc(var(--fz-32) * 0.75);
+}
+
 .content a {
     /* font-weight: bold; */
     color: var(--gray);
@@ -153,6 +158,13 @@ main h3 {
 
 .content h2:not(:first-child) {
     margin-top: 52px;
+}
+
+.content ol{
+    padding-left: var(--fz-18);
+}
+.content ol li{
+    padding-left: calc(var(--fz-18)/2);
 }
 
 p {
@@ -194,6 +206,28 @@ main .caption {
     color: var(--gray);
     font-size: calc(var(--fz-18) * 0.9);
     margin-top: calc(var(--fz-18) * 0.5);
+}
+
+p.source{
+    font-size: calc(var(--fz-18) * 0.9);
+    margin-top: calc(var(--fz-18) * 0.5);
+}
+
+p.source a{
+    color: #206ed7;
+}
+p.source a:hover{
+    color: #290854;
+}
+
+
+
+code{
+    background-color: var(--light-gray);
+    padding: calc(var(--fz-4)* 1/2) var(--fz-4);
+    font-size: calc(var(--fz-12) * 1.25);
+    border-radius: calc(var(--fz-4)* 1/2);
+    font-family: Courier, monospace;
 }
 
 .callout {
@@ -303,7 +337,7 @@ a.figma-button {
     font-size: inherit;
 }
 
-.read{
+.read {
     padding: var(--fz-12) var(--fz-32);
     font-size: var(--fz-20);
     border-radius: var(--fz-52);

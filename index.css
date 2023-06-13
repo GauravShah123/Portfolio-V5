@@ -108,17 +108,20 @@ body {
 } */
 
 #work2 {
-    rotate: -15deg;
     width: fit-content;
     position: relative;
-    left: 10%;
-    width: 50%;
+    width: 60%;
     object-position: top left;
+    overflow: hidden;
 }
 
-#work2-content {
-    padding-right: 0;
+#nav-img{
+    position: absolute;
+    bottom: 0%;
+    /* height: 200%; */
+    width: 130%;
 }
+
 
 ul.tags {
     list-style: none;

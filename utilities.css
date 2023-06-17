@@ -53,7 +53,7 @@ img {
 }
 
 img.loading-bg {
-    background-color: var(--light)
+    background-color: var(--dark-alt)
 }
 
 h1,

@@ -8,20 +8,34 @@ class NavBar extends HTMLElement {
                 <img src="/Assets/Images/Logo.svg" alt="Gaurav Shah's Logo" class="nav-logo">
             </a>
             <ul>
-                <!-- <li class="current"><a href="#">Home</a></li> -->
                 <li><a id="home" href="/">Home</a></li>
                 <li><a id="work" href="/#works">Work</a></li>
-                <li><a id="about" href="/#about">About</a></li>
+                <li><a id="about" href="/#about-me">About</a></li>
                 <li><a id="Résumé" href="/Resume.pdf" target="_blank">Résumé</a></li>
-                <li> <a class="hidden-button" href="mailto:gshah@uwaterloo.ca">Let's Talk <span
+                <li> <a class="hidden-button lets-talk">Let's Talk <span
                 class="material-symbols-outlined">arrow_forward</span></a></li>
             </ul>
-            <button class="button-flex" onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's Talk <span
+            <button class="button-flex lets-talk">Let's Talk <span
                     class="material-symbols-outlined">arrow_forward</span></button>
                     <button class="hamburger" aria-label="Open the menu"><span class="material-symbols-outlined" aria-hidden="true">
                     menu
                     </span></button>
         </nav>
+
+        <!-- Let's Talk Modal -->
+        <div class="modal-bg-overlay modal-closed">
+            <div class="modal">
+    
+                <div class="email-copy">
+                    <p>gshah@uwaterloo.ca</p>
+                    <button class="email-copy-button" id="email-copy-button">Copy</button>
+                </div>
+                <p>OR</p>
+                <a href="https://calendly.com/gs336/30min"><button class="modal-calendly">Schedule a meeting via Calendly</button></a>
+                
+            </div>
+            <button class="close-modal"><span class="material-symbols-outlined">close</span></button>
+        </div>
         `
     }
 }
@@ -88,7 +102,7 @@ class footer extends HTMLElement {
                     <li><a href="https://www.linkedin.com/in/gs336/"><span class="material-icons-outlined">link</span>&nbsp;&nbsp;linkedin.com/in/gs336/</a></li>
                     <li><span class="material-icons-outlined">location_on</span>&nbsp;&nbsp;Waterloo, Ontario, CA</li>
                 </ul>
-                <button class="button-flex" onclick="window.location.href='mailto:gshah@uwaterloo.ca'">Let's Talk <span
+                <button class="button-flex lets-talk">Let's Talk <span
                         class="material-symbols-outlined">arrow_forward</span></button>
             </div>
         </footer>
@@ -123,3 +137,92 @@ navLinks.forEach(link => {
         document.querySelector('.button-flex').classList.remove('active');
     });
 });
+
+//Selected states for Nav menu
+document.addEventListener('DOMContentLoaded', function () {
+    function updateSelectedNavItem() {
+        var url = window.location.href;
+
+        // Remove 'selected' class from all links
+        var links = document.querySelectorAll('nav a');
+        links.forEach(function (link) {
+            link.classList.remove('selected');
+        });
+
+        if (url.includes('#works')) {
+            document.querySelector('a#work').classList.add('selected');
+        } else if (url.includes('#about-me')) {
+            document.querySelector('a#about').classList.add('selected');
+        } else if (url === window.location.origin + '/') {
+            document.querySelector('a#home').classList.add('selected');
+        }
+    }
+
+    updateSelectedNavItem(); // Call the function on page load
+
+    var links = document.querySelectorAll('nav a');
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            var destination = link.getAttribute('href');
+            if (destination) {
+                window.location.href = destination;
+            }
+            updateSelectedNavItem();
+        });
+    });
+});
+
+// Close the Modal
+const modalBgOverlay = document.querySelector('.modal-bg-overlay');
+const modal = document.querySelector('.modal');
+
+function closeModal(){
+    modalBgOverlay.classList.add('modal-closed');
+    modalBgOverlay.setAttribute('aria-hidden', 'true');
+}
+
+modalBgOverlay.addEventListener('click', function (event) {
+    if (event.target === modalBgOverlay) {
+        closeModal();
+    }
+});
+
+document.querySelector('.close-modal').addEventListener('click', function (event) {
+    closeModal();
+});
+
+// Open the Modal
+const letsTalkButtons = document.querySelectorAll('.lets-talk');
+letsTalkButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        modalBgOverlay.classList.remove('modal-closed');
+        modalBgOverlay.setAttribute('aria-hidden', 'false');
+    });
+});
+
+
+// Copy Email
+const emailCopyButton = document.getElementById('email-copy-button');
+const emailCopyText = document.querySelector('.email-copy p');
+
+emailCopyButton.addEventListener('click', function () {
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = emailCopyText.textContent;
+    document.body.appendChild(textarea);
+
+    // Copy the email text to the clipboard
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    // Update the button text
+    emailCopyButton.textContent = 'Copied!';
+    setTimeout(closeModal, 1000);
+    setTimeout(copyTexttoNormal, 1500);
+});
+
+function copyTexttoNormal(){
+    emailCopyButton.textContent = 'Copy';
+}

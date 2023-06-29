@@ -612,9 +612,7 @@ h2.margin-bottom{
 
 /* Only for desktop */
 @media (min-width: 700px) {
-    nav a#home {
-        border-bottom: 2px solid var(--light);
-    }
+
     .worst-ux-p{
         text-align: center; 
     }

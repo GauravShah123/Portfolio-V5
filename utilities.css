@@ -136,9 +136,9 @@ nav ul li a:hover {
     color: var(--light)
 }
 
-nav ul li.current {
-    border-bottom: var(--light) 2px solid
-}
+nav a.selected {
+    border-bottom: 2px solid var(--light);
+  }
 
 nav button {
     font-size: var(--fz-20);
@@ -153,6 +153,133 @@ nav button {
 nav button:hover {
     background-color: var(--primary);
     color: var(--dark-alt)
+}
+
+.modal-bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: #111111f6;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-bg-overlay.modal-closed{
+    opacity: 0;
+    transform: translateY(-10%);
+    visibility: hidden;
+}
+
+.modal-bg-overlay .close-modal{
+    position: fixed;
+    top: var(--fz-32);
+    right: var(--fz-32);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--light);
+    padding: var(--fz-12);
+}
+
+.modal-bg-overlay .close-modal span{
+    font-size: var(--fz-32);
+    pointer-events: none;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: var(--fz-32);
+    /* background-color: var(--dark-alt); */
+    padding: var(--fz-32);
+    transition: 0s;
+}
+
+.modal a{
+    text-decoration: none;
+}
+
+.modal button{
+    padding: var(--fz-20) var(--fz-32);
+    font-size: var(--fz-20);
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0s;
+}
+
+.modal-calendly{
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--fz-18);
+    border: 2px solid var(--light);
+    border-radius: var(--fz-52);
+    background: var(--dark);
+
+}
+
+.modal-calendly:hover{
+    background-color: var(--primary);
+    color: var(--dark);
+    border: 2px solid var(--primary);
+}
+
+.email-copy{
+    display: flex;
+    border: 2px solid var(--light);
+    border-radius: var(--fz-52);
+    padding: 0 0 0 var(--fz-32);
+    gap: var(--fz-20);
+    position: relative;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.email-copy::before{
+    content: "Shoot me a quick email";
+    position: absolute;
+    top: calc(var(--fz-12) * -2.5);
+    left: 50%;
+    transform: translate(-50%);
+    width: max-content;
+    color: var(--light);
+    opacity: 0.5;
+    padding: 0 var(--fz-12);
+}
+
+.modal .email-copy p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.email-copy-button{
+    border-radius: 0 var(--fz-52) var(--fz-52) 0;
+    background-color: var(--light);
+    width: calc( var(--fz-52) * 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-copy-button:hover{
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+.email-copy:has(.email-copy-button:hover)  {
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 h1 {
@@ -172,7 +299,7 @@ h2 {
 }
 
 h5 {
-    font-size: var(--fz-32);
+    font-size: calc(var(--fz-20) * 1.25);
     font-weight: lighter;
     margin-top: var(--fz-8)
 }

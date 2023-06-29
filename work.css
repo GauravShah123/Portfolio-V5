@@ -3,11 +3,11 @@
 } */
 
 /* Only for desktop */
-@media (min-width: 700px) {
+/* @media (min-width: 700px) {
     nav a#work {
         border-bottom: 2px solid var(--light);
     }
-}
+} */
 
 h4 {
     font-size: calc(var(--fz-20) * 1.25);
@@ -97,6 +97,8 @@ main#overview p {
     margin: 0;
 }
 
+
+
 main.hide {
     transform: translateY(var(--fz-52));
     opacity: 0;
@@ -172,6 +174,10 @@ p {
     font-size: var(--fz-18);
 }
 
+.callout.no-top-margin, .callout.heads-up-callout{
+    margin-top: var(--fz-18);
+}
+
 p.no-top-margin {
     margin-top: var(--fz-8);
 }
@@ -206,6 +212,17 @@ main .caption {
     color: var(--gray);
     font-size: calc(var(--fz-18) * 0.9);
     margin-top: calc(var(--fz-18) * 0.5);
+}
+
+.callout:has(p.heads-up){
+    background-color: transparent;
+    border: var(--light-gray) 2px solid;
+}
+
+main p.heads-up{
+    color: var(--gray);
+    font-size: calc(var(--fz-18) * 0.9);
+    margin-top: 0;
 }
 
 p.source{
@@ -255,6 +272,7 @@ code{
 
 .impact-title {
     text-align: center;
+    margin-bottom: var(--fz-32);
 }
 
 .impact-container {
@@ -263,9 +281,62 @@ code{
     justify-content: space-between;
 }
 
+.impact-container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--fz-32);
+}
+
+.impact-container.vertical{
+    flex-direction: column;
+    gap: var(--fz-32);
+}
+
+.main-impact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--fz-32);
+    margin-top: var(--fz-32);
+}
+
+.main-impact .big-number{
+    white-space: nowrap;
+}
+
+.main-impact p{
+    margin: 0;
+    text-align: left;
+}
+
+.impact-container.vertical .big-number{
+    margin: 0;
+}
+
+.impact-container .heads-up-callout.callout:has(p.heads-up){
+    border: none;
+    background-color: #00000011;
+    margin: 0;
+    text-align: left;
+}
+
 .impact {
     text-align: center;
     /* max-width: 200px; */
+}
+
+.big-impact{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: var(--fz-32);
+}
+
+.big-impact > *{
+    margin: 0;
 }
 
 .text-image-container {
@@ -388,6 +459,10 @@ a.figma-button {
     .impact-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .impact-container:has(.callout.heads-up-callout){
+        display: flex;
     }
 
     h1.project-heading {

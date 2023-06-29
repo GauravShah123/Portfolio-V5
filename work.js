@@ -82,3 +82,11 @@ function openTab(openTabLink, closeTabLink, tabToOpen, tabToClose){
 
 document.querySelector("#overview").innerHTML+=`<div></div><button class="read button-flex" onclick="document.querySelector('.tab').scrollIntoView(); openTab(2, 1, 'case-study', 'overview');">Read Case Study <span
 class="material-symbols-outlined">arrow_forward</span></button>`
+
+// Heads up
+const headsUpElements = document.querySelectorAll('p.heads-up');
+
+headsUpElements.forEach((element) => {
+    const newHTML = '<b>Heads up: </b>';
+    element.innerHTML = newHTML + element.innerHTML;
+});

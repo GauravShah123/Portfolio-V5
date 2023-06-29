@@ -8,6 +8,7 @@
 
 #magazine-wrapper > img{
     width: max(min(40vw, 700px), 320px);
+    border-radius: var(--fz-4);
 }
 
 main{

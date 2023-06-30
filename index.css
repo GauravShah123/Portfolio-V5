@@ -4,19 +4,19 @@ body {
 
 .hero {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10vw;
-    padding-top: var(--side-padding);
-    height: 80vh;
-    min-height: 500px;
+    align-items: start;
+    justify-content: center;
+    padding: var(--side-padding) 10vw;
+    margin-top: 75px;
     color: var(--light);
+    text-align: center;
 }
 
 .button-group {
     margin-top: var(--fz-52);
     display: flex;
     gap: var(--fz-32);
+    justify-content: center;
 }
 
 .button-group button {
@@ -28,7 +28,8 @@ body {
 }
 
 .hero img {
-    height: 60vh;
+    /* height: 60vh; */
+    height: 10vh;
 }
 
 .works {
@@ -499,21 +500,10 @@ h2.margin-bottom{
 }
 
 @media (max-width: 1100px) {
-    .hero {
-        gap: var(--side-padding);
-    }
-
-    .hero-content h1 {
-        width: max-content;
-    }
 
     #work1,
     #work2 {
         display: none;
-    }
-
-    .hero {
-        width: 120vw;
     }
 
     .work {
@@ -542,6 +532,10 @@ h2.margin-bottom{
         width: 100vw;
     }
 
+    .hero > *{
+        text-align: left;
+    }
+
     .hero-content h1 {
         width: auto;
     }
@@ -554,6 +548,7 @@ h2.margin-bottom{
 
     .button-group {
         flex-wrap: wrap;
+        justify-content: start;
     }
 
     .work.work.work {

@@ -6,21 +6,22 @@
     background-color: var(--light-gray);
 }
 
-#magazine-wrapper > img{
-    width: max(min(40vw, 700px), 320px);
+#magazine-wrapper>img {
+    width: max(min(40vw, 700px), 300px);
     border-radius: var(--fz-4);
 }
 
-main{
+main {
     display: block;
     min-height: auto;
     padding: var(--side-padding) 16vw;
 }
-main h2:not(:first-child){
+
+main h2:not(:first-child) {
     margin-top: var(--fz-52);
 }
 
-code{
+code {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,13 +30,21 @@ code{
     gap: var(--fz-4);
 }
 
-.flex{
+.flex {
     display: flex;
     gap: var(--fz-8)
 }
 
 @media (max-width: 700px) {
-    .hide-on-mobile{
+    .hide-on-mobile {
         display: none;
+    }
+
+    main {
+        padding: var(--side-padding) 10vw;
+    }
+
+    #magazine-wrapper {
+        padding: var(--fz-32) 10vw;
     }
 }

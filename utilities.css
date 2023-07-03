@@ -136,10 +136,6 @@ nav ul li a:hover {
     color: var(--light)
 }
 
-nav a.selected {
-    border-bottom: 2px solid var(--light);
-  }
-
 nav button {
     font-size: var(--fz-20);
     padding: 0 var(--fz-20);
@@ -155,7 +151,7 @@ nav button:hover {
     color: var(--dark-alt)
 }
 
-.modal-bg-overlay{
+.modal-bg-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -169,13 +165,13 @@ nav button:hover {
     justify-content: center;
 }
 
-.modal-bg-overlay.modal-closed{
+.modal-bg-overlay.modal-closed {
     opacity: 0;
     transform: translateY(-10%);
     visibility: hidden;
 }
 
-.modal-bg-overlay .close-modal{
+.modal-bg-overlay .close-modal {
     position: fixed;
     top: var(--fz-32);
     right: var(--fz-32);
@@ -186,12 +182,12 @@ nav button:hover {
     padding: var(--fz-12);
 }
 
-.modal-bg-overlay .close-modal span{
+.modal-bg-overlay .close-modal span {
     font-size: var(--fz-32);
     pointer-events: none;
 }
 
-.modal{
+.modal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -203,11 +199,11 @@ nav button:hover {
     transition: 0s;
 }
 
-.modal a{
+.modal a {
     text-decoration: none;
 }
 
-.modal button{
+.modal button {
     padding: var(--fz-20) var(--fz-32);
     font-size: var(--fz-20);
     cursor: pointer;
@@ -215,7 +211,7 @@ nav button:hover {
     transition: 0s;
 }
 
-.modal-calendly{
+.modal-calendly {
     color: var(--light);
     display: flex;
     align-items: center;
@@ -227,13 +223,13 @@ nav button:hover {
 
 }
 
-.modal-calendly:hover{
+.modal-calendly:hover {
     background-color: var(--primary);
     color: var(--dark);
     border: 2px solid var(--primary);
 }
 
-.email-copy{
+.email-copy {
     display: flex;
     border: 2px solid var(--light);
     border-radius: var(--fz-52);
@@ -244,7 +240,7 @@ nav button:hover {
     color: var(--light);
 }
 
-.email-copy::before{
+.email-copy::before {
     content: "Shoot me a quick email";
     position: absolute;
     top: calc(var(--fz-12) * -2.5);
@@ -256,28 +252,28 @@ nav button:hover {
     padding: 0 var(--fz-12);
 }
 
-.modal .email-copy p{
+.modal .email-copy p {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
 }
 
-.email-copy-button{
+.email-copy-button {
     border-radius: 0 var(--fz-52) var(--fz-52) 0;
     background-color: var(--light);
-    width: calc( var(--fz-52) * 3);
+    width: calc(var(--fz-52) * 3);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.email-copy-button:hover{
+.email-copy-button:hover {
     background-color: var(--primary);
     color: var(--dark);
 }
 
-.email-copy:has(.email-copy-button:hover)  {
+.email-copy:has(.email-copy-button:hover) {
     color: var(--primary);
     border: 2px solid var(--primary);
 }
@@ -635,12 +631,17 @@ button.play-audio.play-audio:hover {
         right: auto;
         border-radius: 0 0 var(--fz-20) 0
     }
+
     html:has(nav.hide) {
         scroll-padding-top: var(--fz-32)
     }
-    
+
     nav.hide {
         top: -75px;
         opacity: .5
+    }
+
+    nav a.selected {
+        border-bottom: 2px solid var(--light);
     }
 }

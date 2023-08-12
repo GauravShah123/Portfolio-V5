@@ -13,7 +13,6 @@ body {
 }
 
 .hero-bg.hero-bg{
-    background: url("./Assets/Images/bg.svg");
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -21,6 +20,34 @@ body {
     top: 0;
     left: 0;
 }
+
+.hero-bg-blob{
+    filter: blur(200px);
+    opacity: 0.20;
+}
+
+.hero-bg-blob.primary{
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 85%;
+}
+
+.hero-bg-blob.light{
+    position: absolute;
+    top: -10%;
+    right: -20%;
+    width: 80%;
+}
+
+.hero-bg .noise-image{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-size: 400px;
+}
+
+
 
 .button-group {
     margin-top: var(--fz-52);
@@ -198,6 +225,11 @@ h2 {
 .overlay.fade {
     -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
     mask-image: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.fade-reverse{
+    -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1)));
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .noise-image{

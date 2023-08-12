@@ -372,8 +372,8 @@ footer {
     gap: var(--side-padding);
     color: var(--white);
     background-color: var(--dark-alt);
-    padding: var(--fz-52);
-    padding-top: calc(var(--fz-52) - var(--fz-20))
+    padding: var(--fz-80);
+    padding-top: calc(var(--fz-80) - var(--fz-20))
 }
 
 .footer-about p {
